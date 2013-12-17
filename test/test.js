@@ -5,6 +5,18 @@ describe('path-lookup', function(){
   var assert = require('assert');
   var cases = require('case');
 
+  describe('#keys', function(){
+    it('should return an array of keys', function(){
+      var keys = lookup.keys({ a: { B: 0 } }, 'a.b', [cases.upper]);
+      assert('a' == keys.shift());
+      assert('B' == keys.shift());
+    })
+
+    it('should return null if path wasnt found', function(){
+      assert(null == lookup.keys({}, 'a.b.c'));
+    })
+  })
+
   describe('on success', function(){
     it('should return the complete path', function(){
       assert("['a']['b']" == lookup({ a: { b: 0 } }, 'a.b'));

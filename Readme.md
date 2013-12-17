@@ -1,3 +1,4 @@
+
 # path-lookup
 
   lookup path within `object`.
@@ -43,6 +44,15 @@ Function('_', 'return _' + path)(obj); // => undefined
 ## API
 
 ### lookup(obj, path, fns)
+
+  Lookup `path` within `obj` invoking `fn(key)` for each key that wasn't found
+  the functions should return other possibilities for a key.
+
+  return a string `path` or `null`
+
+### lookup.keys(obj, path, fns)
+
+  Same as `lookup()` but returns an array of `keys` or `null`.
 
 ## caveats
 
