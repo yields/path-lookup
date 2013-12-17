@@ -1,0 +1,9 @@
+{
+  "name": "path-lookup",
+  "description": "lookup path within `object`.",
+  "repository": "yields/path-lookup",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {}
+}
