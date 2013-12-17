@@ -1,4 +1,3 @@
-
 # path-lookup
 
   lookup path within `object`.
@@ -35,7 +34,7 @@ Function('_, v', '_' + path + ' = v')(obj, '');
 Function('_', 'return _' + path)(obj); // => ""
 
 // delete
-Function('_', 'delete _' + path)(window);
+Function('_', 'delete _' + path)(obj); // => true
 
 // get
 Function('_', 'return _' + path)(obj); // => undefined
